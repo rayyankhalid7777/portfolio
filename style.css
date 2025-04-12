@@ -1,6 +1,256 @@
+:root {
+  --color-accent: oklch(65% 50% 0); /* Your accent color */
+}
+
+html {
+  accent-color: var(--color-accent);
+}
+
 body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
+  font: 100%/1.5 system-ui;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border-bottom: 1px solid oklch(80% 3% 200);
+  margin-bottom: 1.5em;
+  padding: 0.5em 1em;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+  transition: border-bottom 0.3s, background-color 0.3s;
+}
+
+/* Highlight current page */
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0.1em;
+}
+
+/* Hover effect */
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h);
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+  max-width: 600px;
+  margin: 2em auto;
+  font: inherit;
+}
+
+/* Let labels span the grid and place their content inside a subgrid */
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+/* Inputs and textarea get full width inside label's subgrid */
+input,
+textarea {
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Button spans across both columns */
+button {
+  grid-column: 1 / -1;
+  padding: 0.6em 1.2em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 0.3em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: oklch(from var(--color-accent) 60% 40% h);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1.5em;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects > article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  padding: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.projects article h3 {
+  margin: 0 0 0.5em;
+  line-height: 1.1;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 1em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.Projects > article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.projects article img,
+.project-img {
+  width: 100%;              /* Nearly full width of the card */
+  height: auto;            /* Maintain aspect ratio */
+  max-height: 400px;       /* Increase height but still limit it */
+  display: block;
+  margin: 0 auto 0.75em auto;
+  border-radius: 0.4em;
+  object-fit: contain;     /* Show full image without cropping */
+}
+
+
+.media-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.media-wrapper video {
+  width: 90%;
+  max-width: 640px;
+  height: 400px;
+  border-radius: 0.4em;
+}
+
+.media-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: -0.5em;
+  margin-bottom: 1.5em;
+}
+
+
+/* === Resume Page Styling === */
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2em 1em 1em 1em;
+}
+
+header h1 {
+  margin-bottom: 0.2em;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+section {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+section h2 {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+}
+
+article {
+  margin-bottom: 1.5em;
+}
+
+article h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5em;
+  color: var(--color-accent);
+}
+
+article p {
+  margin: 0.3em 0;
+}
+
+/* Make email + phone + LinkedIn nicely spaced on mobile */
+header a {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 0 0.5em;
   }
+}
+
+article {
+  background: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1.2em;
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 0.4em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resume-download:hover {
+  background-color: oklch(from var(--color-accent) 60% 40% h);
+}
