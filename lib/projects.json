@@ -1,0 +1,76 @@
+[
+    {
+      "title": "Autonomous Car Development",
+      "year": "2024",
+      "image": "images/Autonomous_car.jpg",
+      "description": "Designed and built a 1/8-scale autonomous vehicle with improved obstacle detection and navigation."
+    },
+    {
+      "title": "Robot Contest – Smart Locker Design",
+      "year": "2023",
+      "image": "images/Scuff bot.png",
+      "description": "Engineered a space-saving robot with dual hook system and elevator pulley mechanism."
+    },
+    {
+      "title": "Clock Design and Fabrication",
+      "year": "2023",
+      "image": "images/Clock.jpg",
+      "description": "Built a precision clock mechanism demonstrating mechanical engineering principles."
+    },
+    {
+      "title": "Cannon Fabrication",
+      "year": "2024",
+      "image": "images/Cannon.jpg",
+      "description": "Applied CNC and manual machining techniques to fabricate a working cannon."
+    },
+    {
+      "title": "Wooden Pen Fabrication",
+      "year": "2022",
+      "image": "images/Wooden_pen.jpg",
+      "description": "Crafted a custom wooden pen using lathe machining techniques."
+    },
+    {
+      "title": "Recipe Ratings Analysis and Prediction",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Predicted recipe ratings using machine learning models on large datasets."
+    },
+    {
+      "title": "Signal Conditioning and Analysis",
+      "year": "2023",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Enhanced system stability by designing signal conditioning circuits with Arduino and MATLAB."
+    },
+    {
+      "title": "Sentiment Analysis of Taylor Swift’s Lyrics",
+      "year": "2023",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Performed sentiment and TF-IDF analysis on Taylor Swift's discography."
+    },
+    {
+      "title": "Heat Transfer Simulation and Control",
+      "year": "2022",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Created an automated MATLAB-Arduino system for thermal simulations."
+    },
+    {
+      "title": "Acoustic Wave Spatiotemporal Analysis",
+      "year": "2022",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Analyzed sound waves using a scanned microphone array and advanced averaging methods."
+    },
+    {
+      "title": "Material Strength Optimization (PMMA)",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Optimized material strength-to-density ratios through finite element modeling."
+    },
+    {
+      "title": "Rectilinear Position Control System",
+      "year": "2023",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Modeled and controlled a two-cart LTI system, improving settling time and overshoot."
+    }
+  ]
+  
+  

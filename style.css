@@ -276,3 +276,30 @@ article {
 .resume-download:hover {
   background-color: oklch(from var(--color-accent) 60% 40% h);
 }
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 2em auto;
+  max-width: 800px;
+}
+
+#profile-stats dt {
+  font-weight: bold;
+  grid-row: 1;
+  text-align: center;
+  color: var(--color-accent);
+}
+
+#profile-stats dd {
+  margin: 0;
+  grid-row: 2;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
