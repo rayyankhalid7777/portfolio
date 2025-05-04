@@ -71,19 +71,20 @@ function renderPieChart(projectsGiven) {
   let legend = d3.select('.legend');
   legend.selectAll('li').remove();
 
-  legend
-    .selectAll('li')
-    .data(data)
-    .join('li')
-    .attr('class', (_, idx) => idx === selectedIndex ? 'legend-item selected' : 'legend-item')
-    .attr('style', (_, idx) => idx === selectedIndex ? '' : `--color: ${colors(idx)}`)
-    .html((d) => `<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
-    .on('click', (_, i) => {
-      selectedIndex = selectedIndex === i ? -1 : i;
-      const filtered = getFilteredProjects();
-      renderProjects(filtered, projectsContainer, 'h3');
-      renderPieChart(filtered);
+  data.forEach((d, i) => {
+    legend
+      .append('li')
+      .attr('class', i === selectedIndex ? 'legend-item selected' : 'legend-item')
+      .attr('style', i === selectedIndex ? '' : `--color: ${colors(i)}`)
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+      .on('click', () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+        const filtered = getFilteredProjects();
+        renderProjects(filtered, projectsContainer, 'h3');
+        renderPieChart(filtered);
     });
+});
+
 }
 
 
