@@ -22,7 +22,9 @@ let pages = [
   { url: "Projects/", title: "Projects" },
   { url: "Resume/", title: "Resume" },
   { url: "Contact/", title: "Contact" },
-  { url: "https://github.com/rayyankhalid7777", title: "GitHub" }
+  { url: "https://github.com/rayyankhalid7777", title: "GitHub" },
+  { url: 'meta/', title: 'Meta' }
+
 ];
 
 // Create the nav element and insert at top of body
