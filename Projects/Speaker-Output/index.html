@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acoustic Wave Spatiotemporal Analysis</title>
+    <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <!-- Back to Home and Projects Link -->
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <!-- Project Body Section -->
+  <div class="project-body">
+    <h1>Acoustic Wave Spatiotemporal Analysis</h1>
+    <p style="text-align: right; font-style: italic; color: gray; margin-top: -1em;">
+        2024 | UC San Diego - MAE 170
+    </p>
+
+    <div class="project-links">
+            <a href="Report.pdf" target="_blank">Lab Report</a>
+    </div>
+
+    <main>
+      <p>
+        In this experiment, we aimed to analyze the spatiotemporal propagation of a sound wave emitted by a speaker. The primary objective was to measure how the sound wave's intensity and amplitude vary in space and over time. We used a CNC-controlled scanning stage, a microphone, and MATLAB for data acquisition and analysis. The results help in understanding sound field behavior and validating theoretical models of wave propagation, offering insights into various engineering applications, including noise control and acoustic design.
+      </p>
+
+      <p>
+        The experimental setup involved using a CNC-controlled scanning stage that allowed precise movement of the microphone relative to the speaker. The speaker generated a 5 kHz tone, and the microphone captured the sound intensity at various positions. The scanning was automated using a “Rambo” Arduino system, which was controlled via MATLAB. The measurements were recorded across an array of positions to observe the acoustic wave’s behavior.
+      </p>
+
+      <p>
+        We used time-domain averaging to reduce random noise and enhance the signal clarity. Additionally, the time delay in the arrival of the sound wave at different positions was recorded. This time delay was used to estimate the speed of sound in air.
+      </p>
+
+      <h3>Experiment Setup</h3>
+      <figure>
+        <img src="setup.png" alt="Acoustic Wave Setup" style="max-width: 50%; height: auto;" />
+        <figcaption>Experimental setup with speaker and microphone on CNC-controlled scanning stage.</figcaption>
+      </figure>
+
+    <figure>
+        <img src="wiring.png" alt="Wiring Setup for Acoustic Wave Experiment" style="max-width: 50%; height: auto;" />
+        <figcaption>Wiring Setup for Acoustic Wave Spatiotemporal Analysis Experiment</figcaption>
+    </figure>
+
+    <h3>Experiment in Action</h3>
+
+    <video controls class="project-video">
+        <source src="experiment.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    <figcaption class="media-caption">Video showing the acoustic wave propagation during the experiment.</figcaption>
+
+      <h3>Sound Field at t = 2 ms</h3>
+      <figure>
+        <img src="image1.png" alt="Sound Field at 2ms" style="max-width: 50%; height: auto;" />
+        <figcaption>Sound field at t = 2 ms showing propagation over space.</figcaption>
+      </figure>
+
+      <h3>Results: Time Delay vs. Position</h3>
+      <figure>
+        <img src="curve-Dist-vs-Duration.png" alt="Time Delay vs. Position" style="max-width: 50%; height: auto;" />
+        <figcaption>Time delay of sound pulse's arrival at different positions along the x-axis.</figcaption>
+      </figure>
+
+
+      <h3>Conclusion</h3>
+      <p>
+        The results of this experiment validated theoretical models of sound wave propagation. While the experimental speed of sound was slightly lower than the theoretical value, this is likely due to environmental factors and measurement errors. The ability to visualize the sound field at various points in time using MATLAB allowed us to better understand wave behavior.
+      </p>
+
+      <p>
+        This experiment demonstrated the importance of systematic data collection and analysis in validating acoustic models, with applications in noise control and acoustics engineering.
+      </p>
+
+
+    </main>
+  </div>
+
+</body>
+</html>

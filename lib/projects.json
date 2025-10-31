@@ -1,76 +1,129 @@
 [
     {
+      "title": "General Atomics Autoloader",
+      "year": 2025,
+      "description": "Stepper-controlled fueling and ejection system for inertial fusion targets. Sponsored by General Atomics and UCSD.",
+      "slug": "GA",
+      "image": "../Projects/GA/GA-assembly.jpeg"
+    },
+    {
       "title": "Autonomous Car Development",
-      "year": "2024",
-      "image": "images/Autonomous_car.jpg",
-      "description": "Designed and built a 1/8-scale autonomous vehicle with improved obstacle detection and navigation."
+      "description": "Developed a self-driving car using ROS2, LIDAR, depth camera, and Jetson Nano in UCSD's MAE 148 course. Implemented navigation, localization, and vision pipelines.",
+      "year": 2024,
+      "slug": "Autonomous Car",
+      "image": "../Projects/Autonomous Car/Auto-car.jpg"
     },
     {
-      "title": "Robot Contest – Smart Locker Design",
-      "year": "2023",
-      "image": "images/Scuff bot.png",
-      "description": "Engineered a space-saving robot with dual hook system and elevator pulley mechanism."
-    },
-    {
-      "title": "Clock Design and Fabrication",
-      "year": "2023",
-      "image": "images/Clock.jpg",
-      "description": "Built a precision clock mechanism demonstrating mechanical engineering principles."
-    },
-    {
-      "title": "Cannon Fabrication",
-      "year": "2024",
-      "image": "images/Cannon.jpg",
-      "description": "Applied CNC and manual machining techniques to fabricate a working cannon."
-    },
-    {
-      "title": "Wooden Pen Fabrication",
-      "year": "2022",
-      "image": "images/Wooden_pen.jpg",
-      "description": "Crafted a custom wooden pen using lathe machining techniques."
-    },
-    {
-      "title": "Recipe Ratings Analysis and Prediction",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Predicted recipe ratings using machine learning models on large datasets."
-    },
-    {
-      "title": "Signal Conditioning and Analysis",
-      "year": "2023",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Enhanced system stability by designing signal conditioning circuits with Arduino and MATLAB."
-    },
-    {
-      "title": "Sentiment Analysis of Taylor Swift’s Lyrics",
-      "year": "2023",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Performed sentiment and TF-IDF analysis on Taylor Swift's discography."
-    },
-    {
-      "title": "Heat Transfer Simulation and Control",
-      "year": "2022",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Created an automated MATLAB-Arduino system for thermal simulations."
-    },
-    {
-      "title": "Acoustic Wave Spatiotemporal Analysis",
-      "year": "2022",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Analyzed sound waves using a scanned microphone array and advanced averaging methods."
-    },
-    {
-      "title": "Material Strength Optimization (PMMA)",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Optimized material strength-to-density ratios through finite element modeling."
-    },
-    {
-      "title": "Rectilinear Position Control System",
-      "year": "2023",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Modeled and controlled a two-cart LTI system, improving settling time and overshoot."
-    }
+  "title": "Rectilinear Position Control (MAE171A)",
+  "description": "Designing and tuning a PID controller for a 2-DOF mass-spring system using experimental and simulated data.",
+  "slug": "Controls",
+  "image": "../Projects/Controls/Controls-image.jpg"
+},
+{
+  "title": "Material Strength Optimization (PMMA)",
+  "slug": "Solids",
+  "year": 2025,
+  "description": "Optimized the strength-to-weight ratio of PMMA specimens by combining structural redesign, finite element simulations in ANSYS, and experimental validation using tensile testing and digital image correlation techniques.",
+  "image": "../Projects/Solids/Experiment2.jpg"
+},
+{
+  "title": "Fluid Mechanics: Hele-Shaw Flow Visualization",
+  "slug": "Fluids",
+  "description": "Visualizing fluid behavior in a Hele-Shaw flow: cylinder, Rankine bodies, and custom airfoil experiments.",
+  "year": 2025,
+  "image": "../Projects/Fluids/Undisturbed-flow.jpeg"
+},
+{
+    "title": "Robot Contest - Scuff Bot",
+    "slug": "Robot",
+    "description": "A robot designed for a competition to move objects and solve challenges, competing against other teams",
+    "image": "../Projects/Robot/Scuff-bot.JPG",
+    "year": "2024",
+    "links": [
+        { "label": "Team Website", "url": "https://sites.google.com/eng.ucsd.edu/oldmae3robots/2022-fall-check-it-out/team-39-scuff-bot?authuser=0" },
+        { "label": "Report", "url": "Robot Report - Rayyan Khalid copy.pdf" }
+    ]
+},
+{
+  "title": "Cannon Fabrication",
+  "description": "Custom fabrication of a complete cannon assembly using CNC lathe and milling machines.",
+  "slug": "Cannon",
+  "year": "2023",
+  "image": "../Projects/Cannon/Cannon.JPG",
+  "link": "../projects/Cannon/index.html"
+},
+{
+  "title": "Calibrating Sensors",
+  "slug": "Calibration",
+  "image": "../Projects/Calibration/accelerometer-setup.jpg",
+  "description": "A lab focused on calibrating ultrasonic and accelerometer sensors using Arduino to measure physical quantities such as distance and acceleration.",
+  "year": "2024",
+  "detailsLink": "projects/Calibration/index.html"
+},
+{
+  "title": "Heat Transfer Simulation & Control",
+  "slug": "HeatTransfer",
+  "image": "../Projects/HeatTransfer/setup.jpeg",
+  "description": "This project investigates the cooling performance of aluminum and acrylic plates under free and forced convection. We utilized MATLAB and Arduino for data collection, comparing the cooling rates of these materials.",
+  "year": "2024",
+  "detailed": {
+    "overview": "In this project, we studied the heat transfer performance of aluminum and acrylic plates under free and forced convection conditions. We utilized a combination of experimental setups and simulation techniques.",
+    "process": "The experiment involved heating plates with a halogen bulb, followed by cooling them under different convection modes. Data was collected using Arduino-controlled sensors and analyzed with MATLAB.",
+    "findings": [
+      "Aluminum outperforms acrylic in cooling efficiency under both free and forced convection.",
+      "Forced convection significantly improves the cooling rate of both materials."
+    ],
+    "equipment": [
+      "Arduino & Custom PCB for controlling the heating system and data logging",
+      "Thermistors for temperature measurement",
+      "MATLAB for data processing"
+    ]
+  }
+},
+{
+    "title": "Acoustic Wave Spatiotemporal Analysis",
+    "description": "Analyzed the spatiotemporal propagation of sound waves emitted by a speaker, capturing data with a microphone and visualizing the results using MATLAB and CNC-controlled scanning stage.",
+    "slug": "Speaker-Output",
+    "year": "2024",
+    "image": "../Projects/Speaker-Output/setup.PNG",
+    "details": "projects/Speaker-Output/index.html",
+    "wiringImage": "wiring.png", 
+    "experimentVideo": "experiment.mp4"
+  },
+  {
+  "title": "Clock Design and Fabrication",
+  "slug": "Clock",
+  "year": "2023",
+  "description": "In this personal project, a custom mechanical clock was designed and fabricated from stock materials using CNC lathe and mill machines. The project involved the integration of gears, a pendulum system, and careful assembly to create a functional and visually appealing clock.",
+  "image": "../Projects/Clock/Clock.JPG",
+  "link": "Projects/Clock/index.html"
+},
+{
+  "title": "Digital Image Processing",
+  "slug": "Digital",
+  "year": "2024",
+  "description": "A computer vision–based experiment using MATLAB to measure angular position, velocity, and rotational speed of a motor-driven disk through digital image processing and Arduino control.",
+  "image": "../Projects/Digital/schematic.png",
+  "link": "Projects/Digital/index.html"
+},
+{
+  "title": "Signal Acquisition, Sampling & Conditioning",
+  "slug": "Signals",
+  "year": "2024",
+  "description": "A comprehensive three-lab integration exploring signal acquisition, sampling, aliasing, and analog conditioning using Arduino, oscilloscope, RC filters, and op-amps.",
+  "image": "../Projects/Signals/lab2-setup.JPG",
+  "link": "Projects/Signals/index.html"
+},
+{
+  "title": "Woodwork: Pen & Picture Frame Fabrication",
+  "slug": "Woodwork",
+  "year": "2024",
+  "description": "A hands-on fabrication project involving the design, machining, and finishing of a custom wooden pen and picture frame using miter saws, lathes, and sanding tools.",
+  "image": "../Projects/Woodwork/frame.jpg",
+  "link": "Projects/Woodwork/index.html"
+}
+
+
   ]
   
   

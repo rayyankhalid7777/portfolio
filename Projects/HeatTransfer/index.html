@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Transfer</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+
+    <div class="top-left-element">
+        <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+    </div>
+
+    <div class="project-body">
+        <h1>Heat Transfer</h1>
+        <p style="text-align: right; font-style: italic; color: gray; margin-top: -1em;">
+            2024 | UC San Diego - MAE 170
+        </p>
+
+        <div class="project-links">
+      <a href="Report.pdf" target="_blank">📄 Lab Report</a>
+    </div>
+
+        <main>
+            <p>
+                In this project, we studied the cooling performance of aluminum and acrylic plates under both free and forced convection. We measured the heat transfer rates using thermistors connected to an Arduino, and analyzed the data with MATLAB. The objective was to evaluate the efficiency of different materials in heat dissipation and compare the effects of forced convection.
+            </p>
+
+            <h3>Experimental Setup</h3>
+            <p>
+                The plates were heated using a halogen light bulb, and temperature measurements were taken at various intervals using thermistors. In forced convection, a fan was used to actively cool the plates, whereas in free convection, no fan was used.
+            </p>
+
+            <div class="image-row">
+                <figure>
+                    <img src="Forced_Alum.jpg" alt="Forced Convection - Aluminum">
+                    <figcaption>Forced convection setup using aluminum plate. The fan accelerates the cooling process.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Free_Alum.jpg" alt="Free Convection - Aluminum">
+                    <figcaption>Free convection setup with aluminum plate. The plate cools naturally without forced air circulation.</figcaption>
+                </figure>
+            </div>
+
+            <h3>Key Findings</h3>
+            <ul>
+                <li>The cooling rate of aluminum was faster than acrylic under both convection conditions.</li>
+                <li>Forced convection significantly increased the heat dissipation rate for both materials.</li>
+                <li>Biot numbers for both materials were below 0.1, indicating the validity of the lumped capacitance model.</li>
+            </ul>
+
+            <h3>MATLAB Data Analysis</h3>
+            <p>
+                MATLAB was used to process the data collected during the experiment, which included temperature vs. time graphs for both free and forced convection. We calculated the convective heat transfer coefficient and observed the correlation between material properties and cooling efficiency.
+            </p>
+
+            <h3>Videos of Experiment</h3>
+            <video controls>
+                <source src="live-action.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="media-caption">Video showing the experimental setup and cooling process.</p>
+
+            <video controls>
+                <source src="playing.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="media-caption">Video showing how the angle of the light bulb could be adjusted.</p>
+
+
+        </main>
+    </div>
+
+</body>
+</html>

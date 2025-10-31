@@ -23,7 +23,6 @@ let pages = [
   { url: "Resume/", title: "Resume" },
   { url: "Contact/", title: "Contact" },
   { url: "https://github.com/rayyankhalid7777", title: "GitHub" },
-  { url: 'meta/', title: 'Meta' }
 
 ];
 
@@ -120,22 +119,35 @@ export async function fetchJSON(url) {
   }
 }
 
-export function renderProjects(projects, containerElement, headingLevel = 'h2') {
-  containerElement.innerHTML = '';
+export function renderProjects(projects, container, headingTag = 'h3') {
+  container.innerHTML = '';
 
-  for (let project of projects) {
+  for (const project of projects) {
     const article = document.createElement('article');
-    article.innerHTML = `
-      <h3>${project.title}</h3>
-      <img src="${project.image}" alt="${project.title}">
-      <div>
-        <p>${project.description}</p>
-        <p class="project-year">${project.year}</p>
-      </div>
-`   ;
-    containerElement.appendChild(article);
+
+    const img = document.createElement('img');
+    img.src = project.image;
+    img.alt = project.title;
+
+    const heading = document.createElement(headingTag);
+    heading.textContent = project.title;
+
+    const desc = document.createElement('p');
+    desc.className = 'project-description';
+    desc.textContent = project.description;
+
+    article.append(img, heading, desc);
+
+    article.style.cursor = 'pointer';
+    article.onclick = () => {
+      window.location.href = `${project.slug}/index.html`;
+    };
+
+
+    container.appendChild(article);
   }
 }
+
 
 export async function fetchGitHubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);

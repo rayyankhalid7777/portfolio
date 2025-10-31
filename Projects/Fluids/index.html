@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hele-Shaw Flow Visualization</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <div class="project-body">
+    <h1>Hele-Shaw Flow Visualization</h1>
+    <p class="project-meta">
+      2025 | UC San Diego – MAE 171A Fluid Mechanics Lab
+    </p>
+
+    <div class="project-links">
+      <a href="Report.pdf" target="_blank">📄 Full Lab Report</a>
+    </div>
+
+    <main class="project-detail">
+      <p>
+        In this lab, we explored steady-state, low Reynolds number flows in a Hele-Shaw cell—a parallel plate configuration designed to simulate quasi-two-dimensional potential flows. By injecting colored dye into a shallow water channel between glass plates, we visualized how streamlines behave under classic flow conditions such as flow around a cylinder, Rankine half-body, and Rankine full-body.
+      </p>
+
+      <p>
+        The objective was to understand fundamental fluid dynamics principles including <strong>streamlines</strong>, <strong>stagnation points</strong>, <strong>sources and sinks</strong>, and <strong>potential flow theory</strong>. In addition to visual experiments, we analyzed the flow field images using MATLAB for digital image processing and compared these with numerical simulations (e.g., ANSYS Fluent) and theoretical stream functions.
+      </p>
+
+      <p>
+        Later in the lab, we examined flow separation around an airfoil at a high angle of attack. To mitigate this separation, we designed a custom <strong>leading-edge slat</strong> that was water-jet cut and tested under the same Hele-Shaw setup. The resulting flow patterns were captured and analyzed to evaluate the effectiveness of the slat design.
+      </p>
+
+      <h3>Undisturbed Flow Field</h3>
+      <figure>
+        <img src="Undisturbed-flow.jpeg" alt="Undisturbed flow field"/>
+        <figcaption>Uniform flow through the Hele-Shaw cell without any disturbance elements.</figcaption>
+      </figure>
+
+      <h3>Flow Around Cylinder</h3>
+      <figure>
+        <img src="With-cylinder.jpeg" alt="Flow around a cylinder"/>
+        <figcaption>Streamlines bending around a solid cylinder show clear stagnation points and separation paths.</figcaption>
+      </figure>
+
+      <h3>Rankine Half and Full Body</h3>
+      <div class="image-row">
+        <figure>
+          <img src="Half-Body.jpeg" alt="Rankine half-body flow field"/>
+          <figcaption>Rankine Half-Body: formed by using a source without a sink. Characterized by streamlined growth around a blunt back.</figcaption>
+        </figure>
+        <figure>
+          <img src="Rankine-FullBody.jpeg" alt="Rankine full-body flow field"/>
+          <figcaption>Rankine Full-Body: flow formed by equal strength source and sink, showing symmetrical streamlines resembling streamlined bodies.</figcaption>
+        </figure>
+      </div>
+
+      <p>
+        From these visualizations, we estimated flow parameters such as stagnation point location, and compared source strength using known nozzle flow rates. Streamline alignment was compared analytically, numerically, and experimentally. These comparisons helped us understand discrepancies caused by dye diffusion, imperfect geometry, and real-world viscosity effects.
+      </p>
+
+      <p>
+        The Hele-Shaw flow table proved to be an excellent platform for visualizing theoretical fluid concepts in practice—bridging the gap between mathematical idealizations and experimental realities.
+      </p>
+    </main>
+  </div>
+
+</body>
+</html>

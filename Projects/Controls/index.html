@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Controls Lab | Rectilinear Position Control</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <section class="project-detail">
+    <h1>Rectilinear Position Control (MAE171A)</h1>
+    <p style="text-align: right; margin-top: -20px;">2025 | UC San Diego</p>
+
+    <div class="project-links">
+      <a href="Controls-Report.pdf" target="_blank">📘 Lab Report</a>
+    </div>
+
+    <p>
+      This project explored **control theory** through a physical mass-spring-damper system. The goal was to implement a **PID control algorithm** to regulate the position of two coupled carts in a rectilinear track.
+      We determined system parameters (mass, damping, stiffness) through a series of **open-loop experiments** and validated them using a **linear time-invariant (LTI)** simulation model. 
+      Using the **Ziegler-Nichols tuning method**, we designed and implemented a PID controller and tested it using **closed-loop step response** experiments.
+    </p>
+
+    <p>
+      The controller was evaluated on overshoot, settling time, and steady-state error. We achieved <strong>6.6% overshoot</strong> and <strong>1.3% steady-state error</strong>-within the specified performance constraints. 
+      The project demonstrated how tuning algorithms and physical modeling can come together to create a stable, responsive control system.
+    </p>
+
+    <figure>
+      <img src="Controls-image.jpg" alt="Experiment Setup" />
+      <figcaption>Setup showing the experiment.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="validation-plot.jpg" alt="Model validation plot" />
+      <figcaption>Step response comparison between simulated (blue) and measured (red) values.</figcaption>
+    </figure>
+
+    <p>
+      Through hands-on experimentation and MATLAB simulations, we gained practical insight into the challenges of stabilizing dynamic systems in real-time. The success of our controller validated our models and methodology, with future applications in robotics and automation.
+    </p>
+  </section>
+</body>
+</html>

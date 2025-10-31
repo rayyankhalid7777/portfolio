@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Material Strength Optimization (PMMA)</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <div class="project-body">
+    <h1>Material Strength Optimization (PMMA)</h1>
+    <p style="text-align: right; font-style: italic; color: gray; margin-top: -1em;">
+        2025 | UC San Diego - MAE 171A
+    </p>
+
+    <p class="project-links">
+        📄 <a href="Solids-report.pdf" target="_blank">View Final Report (PDF)</a>
+    </p>
+
+    <p>
+      In this project, we explored the structural optimization of PMMA (Polymethylmethacrylate) through experimental and computational methods. Our objective was to maximize the specific strength and stiffness of PMMA structures by redesigning the material's internal geometry to reduce density without compromising mechanical performance. This was achieved using a combination of physical tensile testing and finite element simulations.
+    </p>
+
+    <p>
+      We began by characterizing the base material using ASTM-standard dogbone specimens, testing them in a universal testing machine equipped with a 30 kN load cell. The stress-strain response of these specimens provided baseline mechanical properties such as Young’s modulus and ultimate strength. This data then guided the design of a structured, lightweight metamaterial version of the dogbone, which we analyzed using ANSYS simulations before 3D printing and testing.
+    </p>
+
+    <p>
+      ANSYS simulations helped visualize stress concentrations and total deformation across the structure. Once fabricated, our custom design was tested under tension, with results recorded and analyzed via Digital Image Correlation (DIC) techniques. We compared the stress-strain curve of our optimized design against the original dogbone to assess performance improvements. The optimized structure achieved a reduced density (~30% of bulk acrylic) while retaining impressive mechanical strength.
+    </p>
+
+    <h3>Finite Element Simulations (ANSYS)</h3>
+
+<div class="image-row">
+  <figure>
+    <img src="Ansys.jpg" alt="Von Mises Stress - ANSYS" />
+    <figcaption>Von Mises stress distribution across the customized PMMA dogbone under tensile load.</figcaption>
+  </figure>
+  <figure>
+    <img src="Ansys2.jpg" alt="Total Deformation - ANSYS" />
+    <figcaption>Total deformation visualized using ANSYS — note high compliance in honeycomb region.</figcaption>
+  </figure>
+</div>
+
+
+    <h3>Custom Dogbone Experiment</h3>
+
+    <div class="image-row">
+      <figure>
+        <img src="Experiment.jpg" alt="Custom dogbone setup - before failure" />
+        <figcaption>Custom laser-cut dogbone setup in the universal testing machine before testing.</figcaption>
+      </figure>
+      <figure>
+        <img src="Experiment2.jpg" alt="Custom dogbone - post failure" />
+        <figcaption>Post-failure image of the same specimen showing brittle fracture in the patterned section.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Stress-Strain Response Comparison</h3>
+
+    <div class="image-row">
+  <figure>
+    <img src="Customdesign-diagram.jpg" alt="Stress-Strain curve - Custom design" />
+    <figcaption>Stress vs. strain for the structured metamaterial dogbone (~17 MPa peak).</figcaption>
+  </figure>
+  <figure>
+    <img src="Dogbone-diagram.jpg" alt="Stress-Strain curve - Dogbone reference" />
+    <figcaption>Stress vs. strain for the standard ASTM dogbone (~31 MPa peak).</figcaption>
+  </figure>
+</div>
+
+
+    <p>
+      While the structured specimen had lower peak stress compared to the solid dogbone, its reduced density and relatively high strength-to-weight ratio make it favorable for lightweight applications. This lab demonstrated the importance of combining material science with geometry-driven structural design to achieve performance gains in engineering materials.
+    </p>
+
+</body>
+</html>

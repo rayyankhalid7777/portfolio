@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autonomous Car Development – Rayyan Khalid</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <main class="project-details">
+
+    <div class="top-left-element">
+      <p><a href="../../index.html">&larr; Back to Home</a> | <a href="../index.html">&larr; Back to Projects</a></p>
+    </div>
+
+    <h1>Autonomous Car Development</h1>
+    <p class="project-meta">2024 | MAE 148, UC San Diego</p>
+
+    <div class="project-links">
+      <a href="https://ucsd-ecemae-148.github.io/course-documentation/" target="_blank">Course Page</a>
+      <a href="https://github.com/UCSD-ECEMAE-148/winter-2024-final-project-team-7" target="_blank">Our Report & Github Repo</a>
+    </div>
+
+    <img src="Auto-car.jpg" alt="Top view of the autonomous car build" class="project-img"/>
+    <figcaption>Final car build with LIDAR, depth camera, Jetson Nano, and Ackermann steering setup.</figcaption>
+
+    <p style="margin: 0 auto; max-width: 800px;">
+      As part of UC San Diego's MAE 148 course on autonomous vehicles, our team designed and built a 1/8-scale self-driving car platform. The vehicle used a combination of LIDAR, stereo depth camera, and odometry sensors to navigate a closed racetrack in full autonomy. One of the highlights of this project was implementing a SLAM (Simultaneous Localization and Mapping) system using ROS2 to build a map of the environment and estimate the car's position in real-time. This allowed our vehicle to localize itself on the map and plan trajectories accordingly.
+    </p>
+
+    <img src="Auto-cameraimage.jpg" alt="RGB camera image and debugging console" class="project-img"/>
+    <figcaption>Live video stream from the OAK-D camera showing lane detection and depth estimation.</figcaption>
+
+    <h2>Project Highlights</h2>
+    <ul>
+      <li>Implemented ROS2-based SLAM system for real-time mapping and localization using LIDAR and wheel encoders.</li>
+      <li>Used an OAK-D depth camera for lane detection and visual feedback in outdoor environments.</li>
+      <li>Ran all computation on an NVIDIA Jetson Nano running Ubuntu 18.04 with NoMachine remote access.</li>
+      <li>Developed motion planning and PID-based control for accurate path following.</li>
+      <li>Performed successful autonomous navigation completing multiple laps around the track.</li>
+    </ul>
+
+    <h2>Autonomous Lap Video</h2>
+    <video class="project-video" controls>
+      <source src="Auto-laps.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </main>
+</body>
+</html>
+

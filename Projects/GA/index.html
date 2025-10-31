@@ -1,0 +1,145 @@
+<style>
+  .project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em 1em;
+  }
+
+  .project-header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .project-header h2 {
+    margin-bottom: 0.3em;
+  }
+
+  .project-links {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+  }
+
+  .project-links a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+  }
+
+  .project-links a:hover {
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  .project-meta {
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 2em;
+  }
+
+  .media-block {
+    margin: 2em auto;
+    text-align: center;
+  }
+
+  .media-block img, 
+  .media-block video {
+    max-width: 90%;
+    height: auto;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .media-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5em;
+  }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>General Atomics Autoloader - Rayyan Khalid</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+  <div class="project-container">
+    <div class="project-header">
+      <h1>General Atomics Inertial Fusion Energy Target Autoloader</h1>
+      <div class="project-meta">2025 | Sponsored by General Atomics & UC San Diego</div>
+
+       <div class="top-left-element">
+        <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+    </div>
+
+      <div class="project-links">
+        <a href="./GA-Fnal-report.pdf" target="_blank">📄 Final Report</a>
+        <a href="./GA-Poster.pdf" target="_blank">🖼 Poster</a>
+        <a href="https://sites.google.com/eng.ucsd.edu/mae156b-2025spring-team09/home" target="_blank">🌐 Project Website</a>
+      </div>
+    </div>
+
+    <p>
+      This mechanical system was developed as part of our senior capstone project in collaboration with General Atomics and UC San Diego. Our team designed and prototyped an automated target handling device for inertial fusion energy (IFE) reactors — capable of precisely loading delicate fusion targets at high speeds and under vacuum conditions.
+    </p>
+
+    <p>
+      The autoloader system is composed of three major subsystems:
+      <strong>1) the funnel and gate system, 2) rotary disk transfer system, and 3) impeller-driven loading system</strong>.
+      Each part was precision-manufactured using CNC machining and laser-cutting processes, with all motion driven via stepper motors and actuated via aluminum linkages.
+    </p>
+
+     <div class="media-block">
+      <img src="./GA-Rotary.jpg" alt="Rotorary Disk CAD" />
+      <p class="media-caption">CAD render of fueling rotor with grooves for target soaking.</p>
+    </div>
+
+    <div class="media-block">
+      <img src="./GA-funnel.jpg" alt="Funnel System" />
+      <p class="media-caption">Funnel system with single-file PVC tubing.</p>
+    </div>
+
+    <div class="media-block">
+      <img src="./GA-gate.jpg" alt="Gate System" />
+      <p class="media-caption">Gate system with solenoid to eject the target.</p>
+    </div>
+
+    <div class="media-block">
+      <img src="./GA-machining.jpeg" alt="Rotary disk Machining" />
+      <p class="media-caption">Using 4-axis CNC Mill to machine the rotary disk.</p>
+    </div>
+
+    <div class="media-block">
+      <img src="./GA-assembly.jpeg" alt="CAD Overview" />
+      <p class="media-caption">System overview with gate and feeding mechanism.</p>
+    </div>
+
+    <div class="media-block">
+      <img src="./GA-tabling.jpeg" alt="Rayyan presenting" />
+      <p class="media-caption">Final demo at UCSD Engineering Showcase (2025).</p>
+    </div>
+
+    <div class="media-block">
+      <img src="./GA-demo.jpeg" alt="Live demo" />
+      <p class="media-caption">Interacting with visitors during the capstone fair.</p>
+    </div>
+
+    <p>
+      This project involved a multidisciplinary approach including:
+      system design, CAD modeling, mechanical fabrication, motion control via stepper motors, and the creation of a vacuum-compatible environment for target loading. The prototype helped pave the way for a more automated IFE reactor workflow at General Atomics.
+    </p>
+  </div>
+
+</body>
+
+</html>

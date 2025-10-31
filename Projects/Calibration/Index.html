@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calibrating Sensors Lab</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <!-- Navigation and Back Links -->
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <!-- Project Body -->
+  <div class="project-body">
+    <h1>Calibrating Sensors Lab</h1>
+    <p style="text-align: right; font-style: italic; color: gray; margin-top: -1em;">
+      2024 | UC San Diego - MAE 170
+    </p>
+    <main>
+      <p>
+        In this project, we calibrated two key sensors: an **ultrasonic sensor** to measure distances and an **accelerometer** to measure accelerations. The main objective was to establish the relationship between the sensor readings and physical quantities by performing calibration tests.
+      </p>
+
+      <p>
+        The ultrasonic sensor was calibrated by measuring the time of flight of sound waves at different known distances and correlating the results. We used an Arduino to control the sensor and collect data, and the results were plotted to obtain the calibration curve. 
+      </p>
+
+      <p>
+        For the accelerometer, we performed a similar process, capturing the voltage output while varying acceleration. The voltage output was then plotted against the known acceleration to establish the relationship. Both experiments used MATLAB to visualize and analyze the data.
+      </p>
+
+      <h3>Experimental Setup</h3>
+      <figure>
+        <img src="accelerometer-setup.jpg" alt="Accelerometer Setup" style="max-width: 50%; height: auto;" />
+        <figcaption>Experimental setup with Arduino and ultrasonic sensor for distance measurement.</figcaption>
+      </figure>
+
+      <h3>Wiring Diagram for Ultrasonic Sensor</h3>
+      <figure>
+        <img src="circuit-ultrasonicsensor.jpg" alt="Ultrasonic Sensor Wiring" style="max-width: 50%; height: auto;" />
+        <figcaption>Wiring diagram for ultrasonic sensor using Arduino Uno.</figcaption>
+      </figure>
+
+      <h3>Calibration Curves</h3>
+      <h4>Distance vs. Duration</h4>
+      <figure>
+        <img src="curve-Dist-vs-Duration.jpeg" alt="Distance vs Duration Calibration Curve" style="max-width: 50%; height: auto;" />
+        <figcaption>Calibration curve showing the relationship between distance and duration for the ultrasonic sensor.</figcaption>
+      </figure>
+
+      <h4>Voltage vs. Acceleration</h4>
+      <figure>
+        <img src="Curve-Volt-vs-Acc.jpeg" alt="Voltage vs Acceleration Calibration Curve" style="max-width: 50%; height: auto;" />
+        <figcaption>Calibration curve showing the relationship between voltage and acceleration for the accelerometer sensor.</figcaption>
+      </figure>
+
+      <h3>Transpiration Experiment Setup</h3>
+      <figure>
+        <img src="transpiration-rate.jpg" alt="Transpiration Rate Experiment" style="max-width: 50%; height: auto;" />
+        <figcaption>Setup for measuring the transpiration rate using environmental sensors and Arduino.</figcaption>
+      </figure>
+
+      <h3>System Wiring for Transpiration Rate</h3>
+      <figure>
+        <img src="wiring-transpiration.jpg" alt="Wiring Diagram for Transpiration Measurement" style="max-width: 50%; height: auto;" />
+        <figcaption>Wiring diagram for the transpiration measurement setup, using Arduino to control sensors.</figcaption>
+      </figure>
+
+      <h3>Conclusion</h3>
+      <p>
+        The calibration of both the ultrasonic sensor and the accelerometer was successfully carried out, resulting in clear and linear calibration curves. The experiments demonstrated the importance of sensor calibration for accurate measurements in engineering applications.
+      </p>
+    </main>
+  </div>
+</body>
+</html>
+

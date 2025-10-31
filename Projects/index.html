@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Rayyan Khalid</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Rayyan Khalid</title>
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
-    <h1 class="projects-title">Projects</h1>
+  <h1 class="projects-title">Projects</h1>
 
-    <div class="chart-legend-container">
-        <input
-            class="searchBar"
-            type="search"
-            aria-label="Search projects"
-            placeholder="🔍 Search projects…"
-        />
+  <div class="projects-header">
+    <input
+      class="searchBar"
+      type="search"
+      aria-label="Search projects"
+      placeholder="🔍 Search projects…"
+    />
+  </div>
 
-        <svg id="projects-pie-plot" viewBox="-50 -50 100 100"></svg>
-        <ul class="legend"></ul>
-        <!-- Only one pie chart SVG allowed to avoid ID conflicts -->
-    </div>
+  <section class="projects">
+    <!-- Project cards will be rendered here -->
+  </section>
 
-
-    <section class="projects">
-        <!-- The project cards will be dynamically inserted here! -->
-    </section>
-
-
-    <script src="../global.js" type="module"></script>
-    <script src="projects.js" type="module"></script>
-
+  <script src="../global.js" type="module"></script>
+  <script src="projects.js" type="module"></script>
 </body>
 </html>
+
 

@@ -189,6 +189,11 @@ h2 {
   color: #555;
   margin-top: -0.5em;
   margin-bottom: 1.5em;
+  max-height: 300px; /* adjust as needed */
+  width: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 
@@ -529,3 +534,292 @@ dt > small {
   padding-bottom: 4em;
   line-height: 1.6;
 }
+
+.intro-text {
+  margin: 0;
+  padding: 0 1.5em;
+  font-size: 20px;
+}
+
+.cover-photo {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 2em auto 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.projects-header {
+  display: flex;
+  justify-content: center;
+  margin: 1em auto 2em;
+  max-width: 600px;
+  padding: 0 1em;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0.6em 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5em;
+  line-height: 1.4;
+}
+
+    .top-left-element {
+        position: fixed; /* or absolute */
+        top: 0;
+        left: 0;
+        /* Optional: Add padding, margin, background, etc. */
+        padding: 10px;
+    }
+
+    /* Optional: Reset default body margin/padding for precise positioning */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .project-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto 0.25rem;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  color: gray;
+}
+
+.project-links {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 1.05rem;
+}
+
+.project-links a {
+  margin: 0 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+
+.project-links a:hover {
+  border-bottom: 2px solid currentColor;
+}
+
+.project-meta {
+  text-align: right;
+  font-style: italic;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 800px;
+  max-height: 800px;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.project-detail {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.project-detail img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.project-detail figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.project-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-links a {
+  margin: 0 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-color, #333);
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.image-row figure {
+  flex: 1 1 45%;
+  margin: 0;
+}
+
+figure {
+  margin-bottom: 2em;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+/* General content padding */
+.project-body {
+  padding: 0 1.5rem;
+}
+
+/* Centered flex image groups */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+}
+
+.image-row img {
+  max-width: 48%;
+  height: auto;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Single image styling */
+.project-body img {
+  display: block;
+  max-width: 90%;
+  margin: 1em auto;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Caption spacing */
+.media-caption {
+  text-align: center;
+  margin-top: 0.3em;
+  margin-bottom: 1.2em;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.project-body {
+    padding: 2rem;
+}
+
+.project-body img, .project-body video {
+    max-width: 80%;  /* Ensures that the image/video doesn't take full width */
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.project-body figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 0.5rem;
+}
+
+.project-links {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.05rem;
+}
+
+.project-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.project-links a:hover {
+    border-bottom: 2px solid currentColor;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.image-row figure {
+  flex: 1 1 30%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-row img, .image-row video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+/* Make sure images don’t stretch too much and maintain good layout */
+.project-body img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+figure {
+  margin-bottom: 2em;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+

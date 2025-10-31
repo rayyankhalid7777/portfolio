@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Image Processing</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <div class="project-body">
+    <h1>Digital Image Processing</h1>
+    <p style="text-align: right; font-style: italic; color: gray; margin-top: -1em;">
+      2024 | UC San Diego – MAE 170
+    </p>
+
+  <main>
+    <p>
+      This project focused on using digital image processing techniques to extract quantitative motion data from a rotating disk system. 
+      The experiment integrated mechanical actuation, image acquisition, and MATLAB-based analysis to measure and analyze the angular position, velocity, and acceleration of a motor-driven wheel. 
+      It combined principles of signal processing, control, and computer vision to develop a complete pipeline for dynamic motion tracking.
+    </p>
+
+    <p>
+      The setup involved a yellow rotating disk mounted on a DC motor, powered through a MOSFET-based driver circuit controlled by an Arduino. 
+      The motor’s speed was varied using <code>analogWrite()</code> commands to create a pseudo-analog PWM signal. 
+      A digital camera recorded the motion of the disk against a black background, ensuring high contrast for precise image thresholding during the MATLAB processing stage.
+    </p>
+
+    <h3>Experimental Setup</h3>
+    <figure>
+      <img src="schematic.png" alt="Experimental setup schematic showing camera, motor, and disk configuration" style="max-width: 50%; height: auto;" />
+      <figcaption>Simplified schematic showing the digital imaging setup with camera, motor, and rotating disk.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="layout.png" alt="Wiring layout of Arduino, MOSFET, and power supply" style="max-width: 50%; height: auto;" />
+      <figcaption>Arduino-based control system for the DC motor using PWM signals and a MOSFET driver circuit.</figcaption>
+    </figure>
+
+    <h3>Rotating Disk Capture</h3>
+    <figure>
+      <img src="image.jpeg" alt="Captured frame of rotating yellow disk" style="max-width: 50%; height: auto;" />
+      <figcaption>Sample frame of the rotating yellow disk used for digital image tracking and angular measurement.</figcaption>
+    </figure>
+
+    <h3>Data Analysis and Image Processing</h3>
+    <p>
+      The recorded video was converted into individual frames using MATLAB, where each frame was binarized to isolate the disk and its tracking marker. 
+      Using the <code>regionprops</code> function, the center and rotating point on the disk were identified in each frame. 
+      The coordinates were then processed with trigonometric calculations to determine the instantaneous angle of rotation, total angular displacement, and revolutions per minute (RPM) over time. 
+      This process demonstrated how digital imaging can be used for non-contact motion analysis with high precision.
+    </p>
+
+    <figure>
+      <img src="figure.png" alt="Multi-panel MATLAB plot of angular data" style="max-width: 50%; height: auto;" />
+      <figcaption>Measured angle, cumulative angular displacement, and RPM over time — illustrating rotational behavior and aliasing at higher speeds.</figcaption>
+    </figure>
+
+    <h3>Results and Discussion</h3>
+    <p>
+      The analysis produced a detailed understanding of the wheel’s rotational behavior. 
+      The measured angle increased periodically, confirming consistent rotation, while the cumulative angle plot reflected continuous angular displacement. 
+      The RPM graph displayed fluctuations in rotational speed due to motor dynamics. 
+      At higher speeds, aliasing effects appeared as apparent reversals in rotation — a phenomenon confirmed through MATLAB’s visualization tools. 
+      The experiment highlighted the importance of synchronizing frame rate, exposure time, and lighting for accurate digital motion capture.
+    </p>
+
+  </main>
+
+</body>
+</html>

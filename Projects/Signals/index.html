@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signal Acquisition, Sampling & Conditioning</title>
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+<body>
+
+  <div class="top-left-element">
+    <p><a href="../../index.html">← Back to Home</a> | <a href="../index.html">← Back to Projects</a></p>
+  </div>
+
+  <div class="project-body">
+    <h1>Signal Acquisition, Sampling & Conditioning</h1>
+    <p style="text-align: right; font-style: italic; color: gray; margin-top: -1em;">
+      2024 | UC San Diego – MAE 170
+    </p>
+
+  <main>
+    <p>
+      This integrated project combines three experiments—<b>Signal Acquisition</b>, <b>Sampling & Aliasing</b>, and <b>Analog Signal Conditioning</b>—into one cohesive workflow. 
+      The goal was to understand the full data path from analog signal generation to digital acquisition and conditioning, using an Arduino microcontroller and an oscilloscope to analyze performance across time and frequency domains.
+    </p>
+
+    <p>
+      The experiments followed a structured engineering process: acquiring real analog signals from a function generator, sampling them at discrete intervals with the Arduino, analyzing Nyquist effects and aliasing, 
+      and finally filtering and amplifying signals through RC and op-amp-based circuits to ensure clean, in-band measurements. The combined work reflects real-world data acquisition systems that rely on tight integration between hardware and software.
+    </p>
+
+    <h3>Instrumentation and Signal Acquisition</h3>
+    <p>
+      The foundation of the setup involved learning how to acquire and observe voltage signals using a <b>bench oscilloscope</b> and an <b>Arduino Uno</b> connected via a breadboard and function generator. 
+      Various test waveforms (sine, square, and step) were measured simultaneously on both instruments to compare timing accuracy and sampling behavior.
+    </p>
+
+    <figure>
+      <img src="lab2-breadboard.jpg" alt="Lab 2 breadboard with oscilloscope probes and Arduino connected" style="max-width: 50%; height: auto;" />
+      <figcaption>Lab 2 setup: Arduino and breadboard connected to the PB-203A trainer with oscilloscope leads for voltage measurement.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="lab3-schematic.png" alt="Circuit schematic connecting Arduino, function generator, and oscilloscope" style="max-width: 50%; height: auto;" />
+      <figcaption>Simplified schematic of the shared signal path between the function generator, oscilloscope, and Arduino.</figcaption>
+    </figure>
+
+    <h3>Sampling, Aliasing, and Frequency Analysis</h3>
+    <p>
+      This phase explored <b>sampling frequency, quantization, and aliasing</b> using the Arduino’s 10-bit analog-to-digital converter. 
+      By feeding periodic signals of increasing frequency, both the oscilloscope and Arduino recorded measurements that were plotted against theoretical expectations.
+      MATLAB was used to visualize the results and validate the aliasing model <code>f_alias = |f_in − N·f_s|</code>.
+    </p>
+
+    <div class="image-row">
+      <figure>
+        <img src="lab3-measuredFrequenciesArduino.png" alt="Measured frequency plot comparing oscilloscope and Arduino" style="max-width: 50%; height: auto;" />
+        <figcaption>Measured frequency comparison between oscilloscope and Arduino, showing good agreement below Nyquist limit.</figcaption>
+      </figure>
+      <figure>
+        <img src="lab3-superimposed.png" alt="Aliasing plot comparing measured and theoretical data" style="max-width: 50%; height: auto;" />
+        <figcaption>Aliasing visualization showing deviation above Nyquist frequency and fold-back effects.</figcaption>
+      </figure>
+    </div>
+
+    <figure>
+      <img src="lab3-volt-time.png" alt="Sampled step signal showing discrete ADC quantization levels" style="max-width: 50%; height: auto;" />
+      <figcaption>Sampled voltage step from Arduino data showing quantized ADC behavior at ~405 Hz sampling rate.</figcaption>
+    </figure>
+
+    <h3>Signal Conditioning and Filtering</h3>
+    <p>
+      To ensure the integrity of digitized signals, we designed analog front-end circuits to <b>filter, amplify, and shape</b> the input waveform before sampling.
+      The setup featured both low-pass and high-pass RC filters, followed by an op-amp gain stage. Experimental Bode plots were generated and compared to theoretical transfer functions to identify cutoff frequencies and gain accuracy.
+    </p>
+
+    <div class="image-row">
+      <figure>
+        <img src="lab4-schematic1.png" alt="RC filter schematic" style="max-width: 50%; height: auto;" />
+        <figcaption>RC low-pass filter circuit used for pre-conditioning analog signals.</figcaption>
+      </figure>
+      <figure>
+        <img src="lab4-schematic2.png" alt="Potentiometer-based filter schematic" style="max-width: 50%; height: auto;" />
+        <figcaption>Configurable RC network with a potentiometer for variable cutoff adjustment.</figcaption>
+      </figure>
+    </div>
+
+    <div class="image-row">
+      <figure>
+        <img src="lab4-schematic3.png" alt="Op-amp circuit schematic" style="max-width: 50%; height: auto;" />
+        <figcaption>Op-amp non-inverting amplifier circuit used for controlled gain before digitization.</figcaption>
+      </figure>
+      <figure>
+        <img src="lab4-RClow.png" alt="Low pass filter test" style="max-width: 50%; height: auto;" />
+        <figcaption>Measured low-pass response validating the expected RC time constant behavior.</figcaption>
+      </figure>
+    </div>
+
+    <figure>
+      <img src="lab4-transferfunction.png" alt="Experimental vs Analytical Transfer Function comparison" style="max-width: 50%; height: auto;" />
+      <figcaption>Experimental vs analytical transfer function comparison, identifying -3 dB cutoff and amplitude match.</figcaption>
+    </figure>
+
+    <h3>Results and Discussion</h3>
+    <p>
+      The integration of these three experiments provided a full understanding of the data acquisition pipeline. 
+      The Arduino’s ADC was validated for frequency response and aliasing limits, while analog conditioning circuits were designed and tested to enhance signal quality. 
+      The project demonstrated how analog and digital domains must be co-optimized for precision sensing applications.
+    </p>
+
+    <ul>
+      <li>Confirmed Nyquist and aliasing theory experimentally using Arduino and oscilloscope data.</li>
+      <li>Validated Arduino’s 10-bit ADC quantization and sampling behavior through MATLAB plots.</li>
+      <li>Designed, simulated, and tested RC filters and op-amp circuits for analog signal conditioning.</li>
+      <li>Measured and fitted transfer functions to quantify gain and -3 dB cutoff frequencies.</li>
+    </ul>
+
+
+  </main>
+
+</body>
+</html>
